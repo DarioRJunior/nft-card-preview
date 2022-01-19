@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Public+Sans:wght@300;400;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary Colors */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    /* Neutral Colors */
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background-color: var(--main-BG);
+    color: var(--White);
+    padding: 1.25rem;
+}
+
+.container {
+    padding: 1.25rem;
+    background-color: var(--card-BG);
+    border-radius: 1rem;
+}
+
+.container h2 {
+    color: var(--White);
+    margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.container h2:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.container p {
+    color: var(--Soft-blue);
+    margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--line);
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+}
+
+.container ul li img {
+    margin-right: 0.3rem;
+}
+
+.container .image-active {
+    position: relative;
+}
+
+.container .image-active div {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 50%);
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.container .image-active div:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.container .image-active div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .eth {
+    color: var(--Cyan);
+}
+
+.container .clock {
+    color: var(--Soft-blue);
+}
+
+.container .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 1rem;
+}
+
+.container .avatar img {
+    width: 3rem;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+
+.container .avatar p {
+    margin-left: 1rem;
+}
+
+.container .avatar span {
+    color: var(--White);
+}
+
+.container .avatar span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+.attribution {
+    font-size: 16px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--Cyan);
+}
+
+
+/* FOOTER */
+
+@media (min-width: 500px) {
+    .container {
+        width: 350px;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+}
